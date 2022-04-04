@@ -9,25 +9,33 @@
 /* Begin PBXBuildFile section */
 		BD1DE6D527FB40BD00458BF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6D427FB40BD00458BF3 /* AppDelegate.swift */; };
 		BD1DE6D727FB40BD00458BF3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6D627FB40BD00458BF3 /* SceneDelegate.swift */; };
-		BD1DE6D927FB40BD00458BF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6D827FB40BD00458BF3 /* ViewController.swift */; };
 		BD1DE6DC27FB40BD00458BF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD1DE6DA27FB40BD00458BF3 /* Main.storyboard */; };
 		BD1DE6DE27FB40BE00458BF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD1DE6DD27FB40BE00458BF3 /* Assets.xcassets */; };
 		BD1DE6E127FB40BE00458BF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD1DE6DF27FB40BE00458BF3 /* LaunchScreen.storyboard */; };
 		BD1DE6EF27FB42A400458BF3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6EE27FB42A400458BF3 /* Post.swift */; };
 		BD1DE6F127FB441500458BF3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6F027FB441500458BF3 /* NetworkManager.swift */; };
+		BD1DE6F327FB4FF900458BF3 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6F227FB4FF900458BF3 /* MainCollectionViewController.swift */; };
+		BD1DE6F527FB507100458BF3 /* UserActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6F427FB507100458BF3 /* UserActionCell.swift */; };
+		BD1DE6F727FB5ED200458BF3 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6F627FB5ED200458BF3 /* Photo.swift */; };
+		BD1DE6F927FB60DA00458BF3 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6F827FB60DA00458BF3 /* PostsTableViewController.swift */; };
+		BD1DE6FB27FB71C000458BF3 /* PhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6FA27FB71C000458BF3 /* PhotosTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BD1DE6D127FB40BD00458BF3 /* NetworkRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1DE6D427FB40BD00458BF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD1DE6D627FB40BD00458BF3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BD1DE6D827FB40BD00458BF3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD1DE6DB27FB40BD00458BF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD1DE6DD27FB40BE00458BF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD1DE6E027FB40BE00458BF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD1DE6E227FB40BE00458BF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD1DE6EE27FB42A400458BF3 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		BD1DE6F027FB441500458BF3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BD1DE6F227FB4FF900458BF3 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
+		BD1DE6F427FB507100458BF3 /* UserActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActionCell.swift; sourceTree = "<group>"; };
+		BD1DE6F627FB5ED200458BF3 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		BD1DE6F827FB60DA00458BF3 /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
+		BD1DE6FA27FB71C000458BF3 /* PhotosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +98,10 @@
 		BD1DE6EA27FB417300458BF3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				BD1DE6D827FB40BD00458BF3 /* ViewController.swift */,
+				BD1DE6F227FB4FF900458BF3 /* MainCollectionViewController.swift */,
+				BD1DE6F827FB60DA00458BF3 /* PostsTableViewController.swift */,
+				BD1DE6FA27FB71C000458BF3 /* PhotosTableViewController.swift */,
+				BD1DE6F427FB507100458BF3 /* UserActionCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -109,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				BD1DE6EE27FB42A400458BF3 /* Post.swift */,
+				BD1DE6F627FB5ED200458BF3 /* Photo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,8 +204,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD1DE6FB27FB71C000458BF3 /* PhotosTableViewController.swift in Sources */,
+				BD1DE6F727FB5ED200458BF3 /* Photo.swift in Sources */,
 				BD1DE6EF27FB42A400458BF3 /* Post.swift in Sources */,
-				BD1DE6D927FB40BD00458BF3 /* ViewController.swift in Sources */,
+				BD1DE6F527FB507100458BF3 /* UserActionCell.swift in Sources */,
+				BD1DE6F327FB4FF900458BF3 /* MainCollectionViewController.swift in Sources */,
+				BD1DE6F927FB60DA00458BF3 /* PostsTableViewController.swift in Sources */,
 				BD1DE6F127FB441500458BF3 /* NetworkManager.swift in Sources */,
 				BD1DE6D527FB40BD00458BF3 /* AppDelegate.swift in Sources */,
 				BD1DE6D727FB40BD00458BF3 /* SceneDelegate.swift in Sources */,
