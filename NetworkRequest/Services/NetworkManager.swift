@@ -7,6 +7,17 @@
 
 import Foundation
 
+enum Link: String {
+    case postsURL = "https://jsonplaceholder.typicode.com/posts"
+    case commentsURL = "https://jsonplaceholder.typicode.com/comments"
+}
+
+enum NetworkError: String, Error {
+    case badURL = "No connection to url address."
+    case unableToComplete = "Unable to complete your request. Please check your internet connection"
+    case invalidData = "The data received from the server was invalid. Please try again."
+}
+
 class NetworkManager {
     
     static let shared = NetworkManager()
