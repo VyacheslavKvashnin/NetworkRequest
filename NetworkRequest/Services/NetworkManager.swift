@@ -11,6 +11,8 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
+    private init() {}
+    
     func fetchPosts(from urlString: String, completed: @escaping (Result<[Post], NetworkError>) -> ()) {
         
         guard let url = URL(string: urlString) else {
