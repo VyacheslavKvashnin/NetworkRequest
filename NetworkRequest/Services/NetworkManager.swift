@@ -11,38 +11,70 @@ class NetworkManager {
     
     static let shared = NetworkManager()
     
-    func fetchPosts(completion: @escaping ([Post]) -> ()) {
+    func fetchPosts(from urlString: String, completed: @escaping (Result<[Post], NetworkError>) -> ()) {
         
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
+        guard let url = URL(string: urlString) else {
+            completed(.failure(.badURL))
+            return
+        }
         
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data else { return }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            if error != nil {
+                completed(.failure(.unableToComplete))
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completed(.failure(.invalidData))
+                return
+            }
+
+            guard let data = data else {
+                completed(.failure(.invalidData))
+                return }
             do {
                 let posts = try JSONDecoder().decode([Post].self, from: data)
                 
                 DispatchQueue.main.async {
-                    completion(posts)
+                    completed(.success(posts))
                 }
-            } catch let error {
-                print(error.localizedDescription)
+            } catch {
+                completed(.failure(.invalidData))
             }
         }.resume()
     }
     
-    func fetchComment(completion: @escaping ([Comment]) -> ()) {
+    func fetchComment(from urlString: String, completed: @escaping (Result<[Comment], NetworkError>) -> ()) {
         
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/comments") else { return }
+        guard let url = URL(string: urlString) else {
+            completed(.failure(.badURL))
+            return }
         
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data else { return }
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            if error != nil {
+                completed(.failure(.unableToComplete))
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completed(.failure(.invalidData))
+                return
+            }
+            
+            guard let data = data else {
+                completed(.failure(.invalidData))
+                return
+            }
+            
             do {
                 let comments = try JSONDecoder().decode([Comment].self, from: data)
-                
                 DispatchQueue.main.async {
-                    completion(comments)
+                    completed(.success(comments))
                 }
-            } catch let error {
-                print(error.localizedDescription)
+            } catch {
+                completed(.failure(.invalidData))
             }
         }.resume()
     }
