@@ -29,11 +29,9 @@ class PostsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellPost", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        
         content.text = posts[indexPath.row].title
         content.secondaryText = posts[indexPath.row].body
         cell.contentConfiguration = content
-
         return cell
     }
     

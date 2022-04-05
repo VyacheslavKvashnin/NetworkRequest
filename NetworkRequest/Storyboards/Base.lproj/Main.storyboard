@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Posts and Photos-->
+        <!--Posts and Comments-->
         <scene sceneID="Pxf-LF-y9F">
             <objects>
                 <collectionViewController id="seU-uQ-GVf" customClass="MainCollectionViewController" customModule="NetworkRequest" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,7 +58,7 @@
                             <outlet property="delegate" destination="seU-uQ-GVf" id="rPI-Gf-63l"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Posts and Photos" id="7n8-th-T8d"/>
+                    <navigationItem key="navigationItem" title="Posts and Comments" id="7n8-th-T8d"/>
                     <connections>
                         <segue destination="E8p-RK-ewy" kind="show" identifier="showPosts" id="YyL-XY-cgN"/>
                         <segue destination="vdS-Ou-RRd" kind="show" identifier="showPhotos" id="wdG-w3-bFP"/>
@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="686" y="56"/>
         </scene>
-        <!--Photos-->
+        <!--Comments-->
         <scene sceneID="rTW-IX-yJW">
             <objects>
-                <tableViewController id="vdS-Ou-RRd" customClass="PhotosTableViewController" customModule="NetworkRequest" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="vdS-Ou-RRd" customClass="CommentsTableViewController" customModule="NetworkRequest" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="S1b-CV-nci">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +91,7 @@
                             <outlet property="delegate" destination="vdS-Ou-RRd" id="JNH-Jd-bJO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Photos" id="mdO-gD-lIx"/>
+                    <navigationItem key="navigationItem" title="Comments" id="mdO-gD-lIx"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szz-sc-edi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

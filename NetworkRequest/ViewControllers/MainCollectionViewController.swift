@@ -9,21 +9,6 @@ import UIKit
 
 class MainCollectionViewController: UICollectionViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     // MARK: UICollectionViewDataSource
     
     let userAction = UserAction.allCases
@@ -45,7 +30,7 @@ class MainCollectionViewController: UICollectionViewController {
         
         switch userAction {
         case .posts: performSegue(withIdentifier: "showPosts", sender: nil)
-        case .photos: performSegue(withIdentifier: "showPhotos", sender: nil)
+        case .comments: performSegue(withIdentifier: "showPhotos", sender: nil)
         }
     }
 }

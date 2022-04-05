@@ -27,21 +27,21 @@ class NetworkManager {
         }.resume()
     }
     
-    func fetchPhotos(completion: @escaping ([Photo]) -> ()) {
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/photos") else { return }
+    func fetchComment(completion: @escaping ([Comment]) -> ()) {
+        
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/comments") else { return }
         
         URLSession.shared.dataTask(with: url) { data, _, _ in
             guard let data = data else { return }
             do {
-                let photo = try JSONDecoder().decode([Photo].self, from: data)
+                let comments = try JSONDecoder().decode([Comment].self, from: data)
+                
                 DispatchQueue.main.async {
-                    completion(photo)
-                    print(photo)
+                    completion(comments)
                 }
             } catch let error {
                 print(error.localizedDescription)
             }
-            
-        }
+        }.resume()
     }
 }

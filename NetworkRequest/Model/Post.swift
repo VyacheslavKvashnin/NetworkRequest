@@ -6,12 +6,11 @@
 //
 
 struct Post: Decodable {
-    let id: Int
     let title: String
     let body: String
 }
 
 enum UserAction: String, CaseIterable {
     case posts = "Posts"
-    case photos = "Photos"
+    case comments = "Comments"
 }

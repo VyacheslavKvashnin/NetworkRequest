@@ -7,29 +7,30 @@
 
 import UIKit
 
-class PhotosTableViewController: UITableViewController {
+class CommentsTableViewController: UITableViewController {
     
-    private var photos: [Photo] = []
+    private var comments: [Comment] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkManager().fetchPhotos { photo in
-            self.photos = photo
+        
+        NetworkManager().fetchComment { comment in
+            self.comments = comment
             self.tableView.reloadData()
-            print(self.photos)
         }
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        photos.count
+        comments.count
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellPhoto", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        content.text = photos[indexPath.row].title
+        content.text = comments[indexPath.row].name
+        content.secondaryText = comments[indexPath.row].email
         cell.contentConfiguration = content
         return cell
     }

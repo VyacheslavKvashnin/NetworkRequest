@@ -16,9 +16,9 @@
 		BD1DE6F127FB441500458BF3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6F027FB441500458BF3 /* NetworkManager.swift */; };
 		BD1DE6F327FB4FF900458BF3 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6F227FB4FF900458BF3 /* MainCollectionViewController.swift */; };
 		BD1DE6F527FB507100458BF3 /* UserActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6F427FB507100458BF3 /* UserActionCell.swift */; };
-		BD1DE6F727FB5ED200458BF3 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6F627FB5ED200458BF3 /* Photo.swift */; };
 		BD1DE6F927FB60DA00458BF3 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6F827FB60DA00458BF3 /* PostsTableViewController.swift */; };
-		BD1DE6FB27FB71C000458BF3 /* PhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6FA27FB71C000458BF3 /* PhotosTableViewController.swift */; };
+		BD1DE6FB27FB71C000458BF3 /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6FA27FB71C000458BF3 /* CommentsTableViewController.swift */; };
+		BD94620427FC82A8006D3889 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD94620327FC82A8006D3889 /* Comment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +33,9 @@
 		BD1DE6F027FB441500458BF3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BD1DE6F227FB4FF900458BF3 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
 		BD1DE6F427FB507100458BF3 /* UserActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActionCell.swift; sourceTree = "<group>"; };
-		BD1DE6F627FB5ED200458BF3 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		BD1DE6F827FB60DA00458BF3 /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
-		BD1DE6FA27FB71C000458BF3 /* PhotosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewController.swift; sourceTree = "<group>"; };
+		BD1DE6FA27FB71C000458BF3 /* CommentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
+		BD94620327FC82A8006D3889 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +100,7 @@
 			children = (
 				BD1DE6F227FB4FF900458BF3 /* MainCollectionViewController.swift */,
 				BD1DE6F827FB60DA00458BF3 /* PostsTableViewController.swift */,
-				BD1DE6FA27FB71C000458BF3 /* PhotosTableViewController.swift */,
+				BD1DE6FA27FB71C000458BF3 /* CommentsTableViewController.swift */,
 				BD1DE6F427FB507100458BF3 /* UserActionCell.swift */,
 			);
 			path = ViewControllers;
@@ -120,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				BD1DE6EE27FB42A400458BF3 /* Post.swift */,
-				BD1DE6F627FB5ED200458BF3 /* Photo.swift */,
+				BD94620327FC82A8006D3889 /* Comment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,11 +204,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD1DE6FB27FB71C000458BF3 /* PhotosTableViewController.swift in Sources */,
-				BD1DE6F727FB5ED200458BF3 /* Photo.swift in Sources */,
+				BD1DE6FB27FB71C000458BF3 /* CommentsTableViewController.swift in Sources */,
 				BD1DE6EF27FB42A400458BF3 /* Post.swift in Sources */,
 				BD1DE6F527FB507100458BF3 /* UserActionCell.swift in Sources */,
 				BD1DE6F327FB4FF900458BF3 /* MainCollectionViewController.swift in Sources */,
+				BD94620427FC82A8006D3889 /* Comment.swift in Sources */,
 				BD1DE6F927FB60DA00458BF3 /* PostsTableViewController.swift in Sources */,
 				BD1DE6F127FB441500458BF3 /* NetworkManager.swift in Sources */,
 				BD1DE6D527FB40BD00458BF3 /* AppDelegate.swift in Sources */,
