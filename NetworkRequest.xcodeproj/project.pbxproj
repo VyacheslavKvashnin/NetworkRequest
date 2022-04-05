@@ -19,6 +19,7 @@
 		BD1DE6F927FB60DA00458BF3 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6F827FB60DA00458BF3 /* PostsTableViewController.swift */; };
 		BD1DE6FB27FB71C000458BF3 /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1DE6FA27FB71C000458BF3 /* CommentsTableViewController.swift */; };
 		BD94620427FC82A8006D3889 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD94620327FC82A8006D3889 /* Comment.swift */; };
+		BD94620627FC8D7B006D3889 /* UserAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD94620527FC8D7B006D3889 /* UserAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		BD1DE6F827FB60DA00458BF3 /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 		BD1DE6FA27FB71C000458BF3 /* CommentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
 		BD94620327FC82A8006D3889 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		BD94620527FC8D7B006D3889 /* UserAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			children = (
 				BD1DE6EE27FB42A400458BF3 /* Post.swift */,
 				BD94620327FC82A8006D3889 /* Comment.swift */,
+				BD94620527FC8D7B006D3889 /* UserAction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				BD1DE6F327FB4FF900458BF3 /* MainCollectionViewController.swift in Sources */,
 				BD94620427FC82A8006D3889 /* Comment.swift in Sources */,
 				BD1DE6F927FB60DA00458BF3 /* PostsTableViewController.swift in Sources */,
+				BD94620627FC8D7B006D3889 /* UserAction.swift in Sources */,
 				BD1DE6F127FB441500458BF3 /* NetworkManager.swift in Sources */,
 				BD1DE6D527FB40BD00458BF3 /* AppDelegate.swift in Sources */,
 				BD1DE6D727FB40BD00458BF3 /* SceneDelegate.swift in Sources */,

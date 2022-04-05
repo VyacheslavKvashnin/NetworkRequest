@@ -14,8 +14,8 @@ class CommentsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkManager().fetchComment { comment in
-            self.comments = comment
+        NetworkManager.shared.fetchComment { comments in
+            self.comments = comments
             self.tableView.reloadData()
         }
     }
@@ -33,5 +33,9 @@ class CommentsTableViewController: UITableViewController {
         content.secondaryText = comments[indexPath.row].email
         cell.contentConfiguration = content
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

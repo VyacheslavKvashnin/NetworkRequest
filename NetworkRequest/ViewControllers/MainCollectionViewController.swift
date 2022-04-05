@@ -11,7 +11,7 @@ class MainCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
     
-    let userAction = UserAction.allCases
+    private let userAction = UserAction.allCases
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         userAction.count
@@ -27,7 +27,7 @@ class MainCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let userAction = userAction[indexPath.item]
-        
+
         switch userAction {
         case .posts: performSegue(withIdentifier: "showPosts", sender: nil)
         case .comments: performSegue(withIdentifier: "showPhotos", sender: nil)
@@ -39,5 +39,4 @@ extension MainCollectionViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: UIScreen.main.bounds.width - 40, height: 100)
     }
-    
 }

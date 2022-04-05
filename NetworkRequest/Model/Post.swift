@@ -9,8 +9,3 @@ struct Post: Decodable {
     let title: String
     let body: String
 }
-
-enum UserAction: String, CaseIterable {
-    case posts = "Posts"
-    case comments = "Comments"
-}

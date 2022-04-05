@@ -9,11 +9,13 @@ import Foundation
 
 class NetworkManager {
     
+    static let shared = NetworkManager()
+    
     func fetchPosts(completion: @escaping ([Post]) -> ()) {
         
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
         
-        URLSession.shared.dataTask(with: url) { data, _, _ in
+        URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else { return }
             do {
                 let posts = try JSONDecoder().decode([Post].self, from: data)
@@ -31,7 +33,7 @@ class NetworkManager {
         
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/comments") else { return }
         
-        URLSession.shared.dataTask(with: url) { data, _, _ in
+        URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data = data else { return }
             do {
                 let comments = try JSONDecoder().decode([Comment].self, from: data)
