@@ -14,7 +14,7 @@ class CommentsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkManager.shared.fetchComment(from: Link.commentsURL.rawValue) { result in
+        NetworkManager.shared.fetch(dataType: Comment.self, from: Link.commentsURL.rawValue) { result in
             
             switch result {
             case .success(let comments):

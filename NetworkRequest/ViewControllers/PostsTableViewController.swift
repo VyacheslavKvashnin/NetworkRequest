@@ -14,7 +14,7 @@ class PostsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkManager.shared.fetchPosts(from: Link.postsURL.rawValue) { result in
+        NetworkManager.shared.fetch(dataType: Post.self, from: Link.postsURL.rawValue) { result in
             
             switch result {
             case .success(let posts):

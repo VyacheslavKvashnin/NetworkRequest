@@ -24,7 +24,7 @@ class NetworkManager {
     
     private init() {}
     
-    func fetchPosts(from urlString: String, completed: @escaping (Result<[Post], NetworkError>) -> ()) {
+    func fetch<T: Decodable>(dataType: T.Type, from urlString: String, completed: @escaping (Result<[T], NetworkError>) -> Void) {
         
         guard let url = URL(string: urlString) else {
             completed(.failure(.badURL))
@@ -47,44 +47,10 @@ class NetworkManager {
                 completed(.failure(.invalidData))
                 return }
             do {
-                let posts = try JSONDecoder().decode([Post].self, from: data)
+                let type = try JSONDecoder().decode([T].self, from: data)
                 
                 DispatchQueue.main.async {
-                    completed(.success(posts))
-                }
-            } catch {
-                completed(.failure(.invalidData))
-            }
-        }.resume()
-    }
-    
-    func fetchComment(from urlString: String, completed: @escaping (Result<[Comment], NetworkError>) -> ()) {
-        
-        guard let url = URL(string: urlString) else {
-            completed(.failure(.badURL))
-            return }
-        
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            
-            if error != nil {
-                completed(.failure(.unableToComplete))
-                return
-            }
-            
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completed(.failure(.invalidData))
-                return
-            }
-            
-            guard let data = data else {
-                completed(.failure(.invalidData))
-                return
-            }
-            
-            do {
-                let comments = try JSONDecoder().decode([Comment].self, from: data)
-                DispatchQueue.main.async {
-                    completed(.success(comments))
+                    completed(.success(type))
                 }
             } catch {
                 completed(.failure(.invalidData))
