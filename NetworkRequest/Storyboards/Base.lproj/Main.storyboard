@@ -62,6 +62,10 @@
                     <connections>
                         <segue destination="E8p-RK-ewy" kind="show" identifier="showPosts" id="YyL-XY-cgN"/>
                         <segue destination="vdS-Ou-RRd" kind="show" identifier="showPhotos" id="wdG-w3-bFP"/>
+                        <segue destination="vdS-Ou-RRd" kind="show" identifier="showPostWithDict" id="Gaq-V5-tRE"/>
+                        <segue destination="vdS-Ou-RRd" kind="show" identifier="showPostWithModel" id="XO2-dy-gRg"/>
+                        <segue destination="vdS-Ou-RRd" kind="show" identifier="showAFGet" id="MBL-VW-1kv"/>
+                        <segue destination="vdS-Ou-RRd" kind="show" identifier="showAFPost" id="E6b-Ry-1OB"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Vg-fi-fya" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -97,10 +101,13 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Comments" id="mdO-gD-lIx"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="drv-RR-p6n" id="7fq-ss-Euq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="szz-sc-edi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1477.5" y="417.25352112676057"/>
+            <point key="canvasLocation" x="1823" y="481"/>
         </scene>
         <!--Posts-->
         <scene sceneID="MLd-ko-jrn">
@@ -131,6 +138,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Posts" id="fa5-gQ-mrY"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="xpw-Tt-EbK" id="ZCg-7t-9ZJ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIv-U1-Wpv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,6 +165,9 @@
             <point key="canvasLocation" x="-71.25" y="55.985915492957744"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="E6b-Ry-1OB"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

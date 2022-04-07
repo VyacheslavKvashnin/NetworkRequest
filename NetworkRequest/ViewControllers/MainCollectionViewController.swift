@@ -31,6 +31,55 @@ class MainCollectionViewController: UICollectionViewController {
         switch userAction {
         case .posts: performSegue(withIdentifier: "showPosts", sender: nil)
         case .comments: performSegue(withIdentifier: "showPhotos", sender: nil)
+        case .postDict: postRequestWithDict()
+        case .postModel: postRequestWithModel()
+        case .alamofireGet: performSegue(withIdentifier: "showAFGet", sender: nil)
+        case .alamofirePost: performSegue(withIdentifier: "showAFPost", sender: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier != "showPosts" {
+            guard let commentVC = segue.destination as? CommentsTableViewController else { return }
+            
+            switch segue.identifier {
+            case "showPhotos": commentVC.getComments()
+            case "showAFGet": commentVC.alamofireGetButton()
+            case "showAFPost": commentVC.alamofirePostButton()
+            default: break
+            }
+        }
+    }
+    
+    private func postRequestWithDict() {
+        let dict = [
+            "name": "Koko",
+            "username": "Jako"
+        ]
+        
+        NetworkManager.shared.postRequest(with: dict, to: Link.postsURL.rawValue) { result in
+            switch result {
+            case .success(let data):
+                print(data)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    private func postRequestWithModel() {
+        let user = User(
+            name: "Name",
+            username: "UserName",
+            email: "post@mail.ru")
+        
+        NetworkManager.shared.postRequest(with: user, to: Link.postsURL.rawValue) { result in
+            switch result {
+            case .success(let user):
+                print(user)
+            case .failure(let error):
+                print(error)
+            }
         }
     }
 }

@@ -9,16 +9,20 @@ import UIKit
 
 class PostsTableViewController: UITableViewController {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     private var posts: [Post] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
         
         NetworkManager.shared.fetch(dataType: Post.self, from: Link.postsURL.rawValue) { result in
             
             switch result {
             case .success(let posts):
                 self.posts = posts
+                self.activityIndicator.stopAnimating()
             case .failure(let error):
                 print(error.localizedDescription)
             }
